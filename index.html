@@ -30,10 +30,12 @@
             </button>
 
             <ul class="burger-list">
-                <li class="nav-item"><a href="#">Accueil</a></li>
-                <li class="nav-item"><a href="#">À propos</a></li>
-                <li class="nav-item"><a href="#">Services</a></li>
-                <li class="nav-item"><a href="#">Contact</a></li>
+                <li class="nav-item"><a href="#intro">Accueil</a></li>
+                <li class="nav-item"><a href="#jv-and-tcg">Jeux Vidéo &amp; TCG</a></li>
+                <li class="nav-item"><a href="#guests">Invités</a></li>
+                <li class="nav-item"><a href="#">Cosplay</a></li>
+                <li class="nav-item"><a href="#partners">Partenaires</a></li>
+                <li class="nav-item"><a href="#contact-us">Contact</a></li>
             </ul>
         </nav>
 
@@ -143,6 +145,19 @@
             </div><!-- .guests-container -->
         </section><!-- #guests -->
 
+        <article id="cosplay">
+            <img src="./src/img/cosplay.webp" alt="Illustration du cosplay">
+            <h2>Un <span>concours cosplay</span> de sélections pour la Coupe de France !</h2>
+            <p class="item3">Mise en scène, musique, show, confection de costumes, jury prestigieux, tout sera mis en
+                place pour
+                célébrer la pratique du Cosplay.
+                Vous pouvez participer aux sélections de votre région et remporter ainsi votre
+                billet pour la finale Nationale (Dates et lieux à venir).</p>
+            <p> À destination aussi bien des enfants que des parents, des joueurs que des passionnés de Mangas ou
+                Comics. Le Soissons Cosplay Contest sera à vivre sur scène ou parmi les spectateurs.</p>
+            <p>Prochainement les règlements et inscriptions pour le Soissons Cosplay Contest.</p>
+        </article>
+
         <section id="partners">
             <h2>Ils nous accordent leur <span>confiance</span>&nbsp;:</h2>
             <div class="partners-container">
@@ -190,11 +205,11 @@
                         <fieldset class="name">
                             <div>
                                 <input type="text" name="lastname" id="lastname" placeholder="Votre nom*">
-                                <p class="error-text">Champ obligatoire</p>
+                                <p class="error-text">Champ obligatoire, entre 2 et 50 caractères.</p>
                             </div>
                             <div>
                                 <input type="text" name="firstname" id="firstname" placeholder="Votre prenom*">
-                                <p class="error-text">Champ obligatoire</p>
+                                <p class="error-text">Champ obligatoire, entre 2 et 50 caractères.</p>
                             </div>
                         </fieldset>
                         <div>
@@ -207,7 +222,7 @@
                         </div>
                         <div>
                             <textarea name="message" id="msg" placeholder="Votre message*"></textarea>
-                            <p class="error-text">Champ obligatoire</p>
+                            <p class="error-text">Champ obligatoire, entre 3 et 250 caractères.</p>
                         </div>
                         <fieldset class="flex-line">
                             <input type="checkbox" id="agreed" name="agreement">
@@ -274,30 +289,31 @@
                                 aria-label="Cliquez pour téléphoner au pôle communication du Soissons Game Show.">03&nbsp;15&nbsp;26&nbsp;34&nbsp;01</a>
                         </li>
                     </ul>
-
-                    <h2>Pour ne rien louper&nbsp;!</h2>
-                    <div class="socials-links">
-                        <a href="http://facebook.com/" target="_blank"
-                            title="Cliquez pour accéder à la page Facebook du Soissons Game Show."
-                            aria-label="Cliquez pour accéder à la page Facebook du Soissons Game Show.">
-                            <img src="./src/icons/socials/facebook.png" alt="Logo Facebook">
-                        </a>
-                        <a href="https://www.messenger.com/" target="_blank"
-                            title="Cliquez pour lancer une discussion avec le pôle communication du Soissons Game Show via Facebook Messenger."
-                            aria-label="Cliquez pour lancer une discussion avec le pôle communication du Soissons Game Show via Facebook Messenger.">
-                            <img src="./src/icons/socials/messenger.png" alt="Logo Messenger">
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank"
-                            title="Cliquez pour accéder à la page Instagram du Soissons Game Show."
-                            aria-label="Cliquez pour accéder à la page Instagram du Soissons Game Show.">
-                            <img src="./src/icons/socials/instagram.png" alt="Logo Instagram">
-                        </a>
-                        <a href="https://x.com/" target="_blank"
-                            title="Cliquez pour accéder au compte Twitter / X du Soissons Game Show."
-                            aria-label="Cliquez pour accéder au compte Twitter / X du Soissons Game Show.">
-                            <img src="./src/icons/socials/twitter.png" alt="Logo Twitter / X">
-                        </a>
-                    </div>
+                    <section class="socials-links-container">
+                        <h2>Pour ne rien louper&nbsp;!</h2>
+                        <div class="socials-links">
+                            <a href="http://facebook.com/" target="_blank"
+                                title="Cliquez pour accéder à la page Facebook du Soissons Game Show."
+                                aria-label="Cliquez pour accéder à la page Facebook du Soissons Game Show.">
+                                <img src="./src/icons/socials/facebook.png" alt="Logo Facebook">
+                            </a>
+                            <a href="https://www.messenger.com/" target="_blank"
+                                title="Cliquez pour lancer une discussion avec le pôle communication du Soissons Game Show via Facebook Messenger."
+                                aria-label="Cliquez pour lancer une discussion avec le pôle communication du Soissons Game Show via Facebook Messenger.">
+                                <img src="./src/icons/socials/messenger.png" alt="Logo Messenger">
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank"
+                                title="Cliquez pour accéder à la page Instagram du Soissons Game Show."
+                                aria-label="Cliquez pour accéder à la page Instagram du Soissons Game Show.">
+                                <img src="./src/icons/socials/instagram.png" alt="Logo Instagram">
+                            </a>
+                            <a href="https://x.com/" target="_blank"
+                                title="Cliquez pour accéder au compte Twitter / X du Soissons Game Show."
+                                aria-label="Cliquez pour accéder au compte Twitter / X du Soissons Game Show.">
+                                <img src="./src/icons/socials/twitter.png" alt="Logo Twitter / X">
+                            </a>
+                        </div>
+                    </section>
                 </section>
             </div>
             <p id="copyrights">&copy; 2025 - Yohann MOY - Sujet d'ECF Front End - Tous droits réservés.</p>

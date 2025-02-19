@@ -25,3 +25,33 @@ header {
     }
 
 }
+
+@media screen and (max-width: 850px) {
+    h1 {
+        max-width: 70%;
+    }
+
+    img#presentation {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    header section {
+        text-align: center;
+    }
+
+    nav {
+        margin-bottom: 20rem;
+    }
+
+    h1,
+    img#presentation {
+        max-width: initial;
+    }
+
+    img#presentation {
+        width: 500px;
+    }
+
+}

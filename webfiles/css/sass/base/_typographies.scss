@@ -1,5 +1,4 @@
 // base/_typographies.scss
-
 @use '../utils/_variables' as *;
 
 @font-face {
@@ -16,42 +15,49 @@
     font-display: swap;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-family: $titleFont;
     color: $primary;
 
-    span{
+    span {
         color: $secondary;
     }
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
-    letter-spacing: 3%;
+    letter-spacing: 1.2px;
     margin-bottom: 3rem;
 }
 
-h2{
+h2 {
     font-size: 2rem;
-    letter-spacing: 3%;
+    letter-spacing: 1px;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
-    letter-spacing: 6%;
+    letter-spacing: 1.44px;
 }
 
-p, a, li, label{
+p,
+a,
+li,
+label {
     font-family: $normal;
     color: $primary;
 }
 
-p{
+p {
     margin-bottom: 1rem;
     line-height: 1.25rem;
 }
 
-input, textarea, button{
+input,
+textarea,
+button {
     font-family: $normal;
     font-size: 1rem;
     color: #565656;

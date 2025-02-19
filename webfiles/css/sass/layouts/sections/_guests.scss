@@ -48,3 +48,11 @@
     }
 
 }
+
+
+@media screen and (max-width: 615px) {
+    .guests-container {
+        flex-direction: column;
+    }
+
+}

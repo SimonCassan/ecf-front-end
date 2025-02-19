@@ -4,6 +4,7 @@ const lineMiddle = document.querySelector('.menu-middle');
 const lineBot = document.querySelector('.menu-bottom');
 
 const burgerMenu = document.querySelector('.burger-list');
+const links = burgerMenu.querySelectorAll('a');
 
 function closeMenu() {
     lineTop.classList.toggle('rotate45', false);
@@ -25,6 +26,12 @@ window.addEventListener('click', (event) => {
         closeMenu();
 })
 
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenu();
+    })
+});
+
 
 
 const lastnameField = document.querySelector('#lastname');
@@ -37,30 +44,48 @@ const btnForm = document.querySelector('.btn-submit');
 const form = document.querySelector('form');
 const cardSuccess = document.querySelector('.card');
 
+// A la soumission du formulaire
 form.addEventListener('submit', (event) => {
+    // empécher la soumission normale du formulaire
     event.preventDefault();
-    const isFnameValid = checkValue(firstnameField);
-    const isLnameValid = checkValue(lastnameField);
+    // vérifie que tous les champs sont valides
+    const isFnameValid = checkValue(firstnameField, 2, 50, true);
+    const isLnameValid = checkValue(lastnameField, 2, 50, true);
     const isEmailValid = checkValueEmail(emailField);
-    const isSubjectValid = checkValue(subjectField);
-    const isMsgValid = checkValue(msgField);
+    const isSubjectValid = checkValue(subjectField, 3);
+    const isMsgValid = checkValue(msgField, 3);
     const isCheckboxValid = checkValueCheckbox(checkBoxField);
+    // si tous les champs sont valides, on affiche un message et on remet à zéro le formulaire
     if (isFnameValid && isLnameValid && isEmailValid && isSubjectValid && isMsgValid && isCheckboxValid) {
         cardSuccess.classList.add('card-active');
         setTimeout(() => {
             cardSuccess.classList.remove('card-active');
         }, 3500);
+        form.reset();
     }
 })
 
-function checkValue(dataField) {
-    if (dataField.value.trim() === "") {
+// permet de vérifier la validité d'un champ
+function checkValue(dataField, min = 1, max = 250, isLetters = false) {
+    const dataValue = dataField.value.trim();
+    if (dataValue === "" || dataValue.length < min || dataValue > max) {
         dataField.parentElement.classList.add('error-active');
         return false;
+    }
+    else if (isLetters) {
+        const regexLetters = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
+        if (!regexLetters.test(dataValue)) {
+            dataField.parentElement.classList.add('error-active');
+            return false;
+        }
+        else
+            return true;
     }
     else
         return true;
 }
+
+// permet de vérifier si la Checkbox a bien été cochée
 function checkValueCheckbox(dataField) {
     if (dataField.checked)
         return true;
@@ -69,10 +94,13 @@ function checkValueCheckbox(dataField) {
         return false;
     }
 }
+
+// vérifier que le champ email existe et est valide
 function checkValueEmail(dataField) {
     if (checkValue(dataField)) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(dataField.value.trim())) {
+            console.log('3');
             dataField.parentElement.classList.add('error-active');
             dataField.nextElementSibling.textContent = "Saisir un email valide : nom@exemple.fr.";
             return false;
@@ -84,6 +112,7 @@ function checkValueEmail(dataField) {
         return false;
 }
 
+// retire les messages d'erreurs quand on commence à taper quelque chose
 firstnameField.addEventListener('input', () => {
     firstnameField.parentElement.classList.remove('error-active');
 })

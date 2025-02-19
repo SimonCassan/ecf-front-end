@@ -1,0 +1,25 @@
+#cosplay {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 8rem;
+    text-align: center;
+
+    .item3 {
+        grid-row: span 2;
+        align-self: center;
+        text-align: justify;
+    }
+
+    h2 {
+        align-self: center;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    #cosplay {
+        grid-template-columns: 1fr;
+    }
+}

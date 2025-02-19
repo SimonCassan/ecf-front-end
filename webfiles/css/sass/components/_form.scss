@@ -32,6 +32,12 @@ form p {
     color: #000;
 }
 
+.error-active input:not(input[type="checkbox"]),
+.error-active textarea {
+    border: 2px solid red;
+    box-shadow: 0 0 1rem #333;
+}
+
 .card {
     position: absolute;
     top: 25%;

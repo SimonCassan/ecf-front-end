@@ -46,7 +46,7 @@ footer {
         position: relative;
         z-index: 1;
 
-        section {
+        section:not(.socials-links-container) {
             width: 50%;
         }
     }
@@ -220,6 +220,45 @@ footer {
 
             &::before {
                 background: radial-gradient(circle at bottom left, #ED4621 0%, #A11368 200%)
+            }
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .mxwdth {
+            flex-direction: column;
+
+            section:not(.socials-links-container) {
+                width: 100%;
+            }
+
+            .socials-links-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #location {
+            h2 {
+                text-align: center;
+            }
+
+            ul {
+                display: flex;
+                align-items: baseline;
+
+                li:first-of-type {
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 615px) {
+        #location {
+            ul {
+                display: block;
             }
         }
     }
