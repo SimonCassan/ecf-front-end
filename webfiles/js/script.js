@@ -6,6 +6,7 @@ const lineBot = document.querySelector('.menu-bottom');
 const burgerMenu = document.querySelector('.burger-list');
 const links = burgerMenu.querySelectorAll('a');
 
+// on remet la ligne top/bottom à la position horizontale, fait réapparaitre la ligne du milieu (opacity à 1), et on masque le menu
 function closeMenu() {
     lineTop.classList.toggle('rotate45', false);
     lineMiddle.classList.toggle('opacity0', false);
@@ -13,7 +14,9 @@ function closeMenu() {
     burgerMenu.classList.toggle('burger-active', false);
 }
 
+// quand on clique sur le menu, on active/enlève les classes nécessaires
 btnBurger.addEventListener('click', (event) => {
+    // pour que le clic sur le bouton ne soit pas transmis au clic sur la window - qui elle ferme tout systématiquement
     event.stopPropagation();
     lineTop.classList.toggle('rotate45');
     lineMiddle.classList.toggle('opacity0');
@@ -26,13 +29,12 @@ window.addEventListener('click', (event) => {
         closeMenu();
 })
 
+// quand on clic sur un des liens du menu, on ferme le menu
 links.forEach(link => {
     link.addEventListener('click', () => {
         closeMenu();
     })
 });
-
-
 
 const lastnameField = document.querySelector('#lastname');
 const firstnameField = document.querySelector('#firstname');
@@ -132,3 +134,16 @@ msgField.addEventListener('input', () => {
 checkBoxField.addEventListener('change', () => {
     checkBoxField.parentElement.classList.remove('error-active');
 })
+
+
+// changement du couleur du menu burger quand on passe sur le footer
+const footer = document.querySelector('footer');
+// décalage du menu par rapport au haut de la fenêtre visible
+const menuOffset = 83.2;
+window.addEventListener('scroll', () => {
+    const footerOffset = footer.offsetTop;
+    // Position actuelle du scroll
+    const scrollY = window.scrollY;
+    const footerVisibleTop = footerOffset - scrollY;
+    burgerMenu.style.backgroundColor = footerVisibleTop <= menuOffset ? '#202e5a' : '#c82d43';
+});

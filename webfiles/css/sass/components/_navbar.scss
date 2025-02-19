@@ -41,6 +41,7 @@ nav {
             height: 4px;
             background-color: $primary;
             border-radius: 10px;
+            border: 1px solid $tertiary;
 
             &:first-of-type {
                 top: 6px;
@@ -54,6 +55,12 @@ nav {
             &:last-of-type {
                 bottom: 6px;
             }
+        }
+    }
+
+    @media screen and (max-width: 615px) {
+        a span {
+            display: none;
         }
     }
 }

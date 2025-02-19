@@ -39,9 +39,10 @@ form p {
 }
 
 .card {
-    position: absolute;
+    position: fixed;
     top: 25%;
     left: 25%;
+    transform: translate(-25%, -25%);
     width: 310px;
     visibility: hidden;
     opacity: 0;
@@ -52,25 +53,27 @@ form p {
     padding: 1.2rem;
     transition: opacity 0.2s, visibility 0s;
     text-align: justify;
-}
 
-.card div {
-    position: relative;
-}
+    div {
+        position: relative;
+    }
 
-.card img {
-    position: absolute;
-    top: 0.2rem;
-    left: 0;
-}
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8%;
+    }
 
-.card h3 {
-    margin-left: 2rem;
-}
+    h3 {
+        margin-left: 2rem;
+        letter-spacing: normal;
+    }
 
-.card.card-active {
-    visibility: visible;
-    opacity: 1;
+    &.card-active {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .btn-submit {
@@ -85,4 +88,10 @@ form p {
 .btn-submit:active {
     transform: translateY(2px) scale(0.99);
     box-shadow: 0 0 1rem #333;
+}
+
+@media screen and (max-width: 615px) {
+    .name {
+        flex-direction: column;
+    }
 }
