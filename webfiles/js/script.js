@@ -78,6 +78,7 @@ function checkValue(dataField, min = 1, max = 250, isLetters = false) {
         const regexLetters = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
         if (!regexLetters.test(dataValue)) {
             dataField.parentElement.classList.add('error-active');
+            dataField.nextElementSibling.textContent = "Caractères non autorisés";
             return false;
         }
         else
@@ -117,9 +118,11 @@ function checkValueEmail(dataField) {
 // retire les messages d'erreurs quand on commence à taper quelque chose
 firstnameField.addEventListener('input', () => {
     firstnameField.parentElement.classList.remove('error-active');
+    firstnameField.parentElement.querySelector('.error-text').textContent = "Champ obligatoire, entre 2 et 50 caractères.";
 })
 lastnameField.addEventListener('input', () => {
     lastnameField.parentElement.classList.remove('error-active');
+    lastnameField.parentElement.querySelector('.error-text').textContent = "Champ obligatoire, entre 2 et 50 caractères.";
 })
 subjectField.addEventListener('input', () => {
     subjectField.parentElement.classList.remove('error-active');
@@ -145,5 +148,12 @@ window.addEventListener('scroll', () => {
     // Position actuelle du scroll
     const scrollY = window.scrollY;
     const footerVisibleTop = footerOffset - scrollY;
-    burgerMenu.style.backgroundColor = footerVisibleTop <= menuOffset ? '#202e5a' : '#c82d43';
+    if (footerVisibleTop <= menuOffset) {
+        burgerMenu.style.backgroundColor = '#202e5a';
+        document.documentElement.style.setProperty('--underline-color', '#c82d43');
+    }
+    else {
+        burgerMenu.style.backgroundColor = '#c82d43';
+        document.documentElement.style.setProperty('--underline-color', '#202e5a');
+    }
 });
