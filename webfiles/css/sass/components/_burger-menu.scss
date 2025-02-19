@@ -73,3 +73,7 @@
     right: max(0.5rem, calc((100vw - 1225px) / 2));
     z-index: 10;
 }
+
+#burger-icon:hover span {
+    box-shadow: 0 0 0.2rem #fff;
+}
