@@ -24,12 +24,6 @@
     }
 
     @media screen and (max-width: 615px) {
-        .partners-container div {
-            padding: 1.5rem 0.75rem;
-        }
-    }
-
-    @media screen and (max-width: 500px) {
         .partners-container {
             gap: 1rem;
             flex-wrap: wrap;

@@ -24,6 +24,24 @@ header {
         max-width: 550px;
     }
 
+    .underline {
+        position: relative;
+    }
+
+    .underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        /* Ajustez selon vos besoins */
+        width: 100%;
+        height: 4px;
+        /* Épaisseur du soulignement */
+        background-color: $secondary;
+        border-radius: 1rem;
+        /* Arrondi des bords */
+    }
+
 }
 
 @media screen and (max-width: 850px) {

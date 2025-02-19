@@ -51,62 +51,6 @@ footer {
         }
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        margin-top: 2.5rem;
-
-        fieldset {
-            display: flex;
-            gap: 1.25rem;
-        }
-
-        input,
-        textarea,
-        button[type="submit"] {
-            width: 100%;
-            padding: 0.625rem 1rem;
-            box-sizing: border-box;
-            border-radius: 0.625rem;
-            border: none;
-            background-color: $primary;
-        }
-
-        textarea {
-            resize: none;
-            max-height: 250px;
-            min-height: 250px;
-            min-width: 100%;
-            max-width: 100%;
-        }
-
-        input[type="checkbox"] {
-            padding: 0;
-            width: 30px;
-        }
-
-        button {
-            margin-top: 1.25rem;
-            cursor: pointer;
-            padding: 0.35rem 1rem !important;
-
-            span.content {
-                max-width: 250px;
-                margin: auto;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-
     #location {
 
         #map-container {
@@ -223,7 +167,7 @@ footer {
         }
     }
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1050px) {
         .mxwdth {
             flex-direction: column;
 

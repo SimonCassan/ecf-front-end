@@ -26,8 +26,8 @@
     background-color: #c82d43;
     position: fixed;
     top: 5.2rem;
-    // bloque la position du menu quand on dépasse les 1200px
-    right: max(0.5rem, calc((100vw - 1200px) / 2));
+    // bloque la position du menu quand on dépasse les 1225px
+    right: max(0.5rem, calc((100vw - 1225px) / 2));
     padding: 1rem 3rem 1rem 1rem;
     max-width: 300px;
     width: 50%;
@@ -59,7 +59,7 @@
     height: 2px;
     display: block;
     margin-top: 0.3rem;
-    background: $tertiary;
+    background: var(--underline-color);
     transition: width 0.3s ease;
 }
 
@@ -69,7 +69,7 @@
 
 #burger-icon {
     position: fixed;
-    // bloque la position du bouton quand on dépasse les 1200px
-    right: max(0.5rem, calc((100vw - 1200px) / 2));
+    // bloque la position du bouton quand on dépasse les 1225px
+    right: max(0.5rem, calc((100vw - 1225px) / 2));
     z-index: 10;
 }

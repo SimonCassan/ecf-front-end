@@ -1,13 +1,80 @@
 @use '../utils/_variables' as *;
 
-input,
-textarea,
-input[type="checkbox"]+label {
-    cursor: pointer;
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+
+    fieldset {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+    }
+
+    input,
+    textarea,
+    input[type="checkbox"]+label,
+    .btn-submit {
+        cursor: pointer;
+    }
+
+    input,
+    textarea,
+    .btn-submit {
+        width: 100%;
+        padding: 0.625rem 1rem;
+        box-sizing: border-box;
+        border-radius: 0.625rem;
+        border: none;
+        background-color: $primary;
+    }
+
+    textarea {
+        resize: none;
+        max-height: 250px;
+        min-height: 250px;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    input[type="checkbox"] {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-submit {
+        margin-top: 1.25rem;
+        padding: 0.35rem 1rem;
+
+        span.content {
+            max-width: 250px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+
+
+
+.name div {
+    position: relative;
 }
 
 .name>* {
-    flex: 1;
+    width: 100%;
 }
 
 .error-text {
