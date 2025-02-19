@@ -1,15 +1,1 @@
-#burger-icon {
-    display: none
-}
-
-footer #location #map-container {
-    border-radius: none
-}
-
-#map-container img {
-    border-radius: 1rem
-}
-
-iframe {
-    display: none
-}
+#burger-icon{display:none}footer #location #map-container{border-radius:none}#map-container img{border-radius:1rem}iframe{display:none}
