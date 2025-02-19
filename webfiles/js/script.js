@@ -103,7 +103,6 @@ function checkValueEmail(dataField) {
     if (checkValue(dataField)) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(dataField.value.trim())) {
-            console.log('3');
             dataField.parentElement.classList.add('error-active');
             dataField.nextElementSibling.textContent = "Saisir un email valide : nom@exemple.fr.";
             return false;
