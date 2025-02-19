@@ -1,0 +1,82 @@
+@use '../utils/_variables' as *;
+
+input,
+textarea,
+input[type="checkbox"]+label {
+    cursor: pointer;
+}
+
+.name>* {
+    flex: 1;
+}
+
+.error-text {
+    display: none;
+}
+
+form p {
+    margin: 0.4rem 0.2rem 0 0;
+}
+
+.flex-line {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-line label {
+    width: calc(100% - 60px);
+}
+
+.error-active p {
+    display: block;
+    color: #000;
+}
+
+.card {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 310px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: $tertiary;
+    box-shadow: 0 0 1rem #333;
+    border-radius: 1rem;
+    color: #fff;
+    padding: 1.2rem;
+    transition: opacity 0.2s, visibility 0s;
+    text-align: justify;
+}
+
+.card div {
+    position: relative;
+}
+
+.card img {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+}
+
+.card h3 {
+    margin-left: 2rem;
+}
+
+.card.card-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn-submit {
+    transition: all 0.2s;
+}
+
+.btn-submit:hover {
+    filter: brightness(110%);
+    box-shadow: 0 0 2rem #333;
+}
+
+.btn-submit:active {
+    transform: translateY(2px) scale(0.99);
+    box-shadow: 0 0 1rem #333;
+}

@@ -1,0 +1,58 @@
+// base/_typographies.scss
+
+@use '../utils/_variables' as *;
+
+@font-face {
+    font-family: 'Montserrat Semi Bold';
+    src: url('../../../../src/fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Mono Regular';
+    src: url('../../../../src/fonts/RobotoMono-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+h1, h2, h3{
+    font-family: $titleFont;
+    color: $primary;
+
+    span{
+        color: $secondary;
+    }
+}
+
+h1{
+    font-size: 2.5rem;
+    letter-spacing: 3%;
+    margin-bottom: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    letter-spacing: 3%;
+}
+
+h3{
+    font-size: 1.5rem;
+    letter-spacing: 6%;
+}
+
+p, a, li, label{
+    font-family: $normal;
+    color: $primary;
+}
+
+p{
+    margin-bottom: 1rem;
+    line-height: 1.25rem;
+}
+
+input, textarea, button{
+    font-family: $normal;
+    font-size: 1rem;
+    color: #565656;
+}

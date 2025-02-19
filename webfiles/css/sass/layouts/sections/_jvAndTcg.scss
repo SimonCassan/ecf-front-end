@@ -1,0 +1,52 @@
+#jv-and-tcg{
+
+    p, p+ul{
+        padding: 0 1.25rem;
+    }
+
+    P+ul{
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        ul{
+            padding-left: 1rem;
+
+            li{
+                list-style-type: disc;
+            }
+        }
+
+        #secondList{
+            margin-left: 4rem;
+        }
+    }
+
+    img{
+        width: 400px;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+
+        &:first-of-type{
+
+            margin-bottom: 3rem;
+
+            article{
+                margin-left: 2.5rem;
+            }
+        }
+
+        &:last-of-type{
+
+            flex-direction: row-reverse;
+
+            article{
+                margin-left: 0;
+                margin-right: 2.5rem;
+            }
+        }
+    }
+}

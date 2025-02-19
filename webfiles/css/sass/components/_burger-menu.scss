@@ -1,0 +1,41 @@
+.menu-top,
+.menu-middle,
+.menu-bottom {
+    transition: opacity 0.5s, transform 0.2s;
+}
+
+.rotate45 {
+    transform: translate(0, 10px) rotate(45deg);
+}
+
+.-rotate45 {
+    transform: translate(0, -15px) rotate(-45deg);
+}
+
+.opacity0 {
+    opacity: 0;
+    transition: none;
+}
+
+.burger-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.3s, visibility 1s 0s;
+    background-color: #c82d43;
+    position: absolute;
+    top: 5.2rem;
+    padding: 1rem 3rem 1rem 1rem;
+    width: 50%;
+    transform: translateX(175%);
+}
+
+.burger-active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(120%);
+    transition: opacity 0.4s, transform 0.3s;
+}
+
+.burger-list a {
+    font-size: 1rem;
+}

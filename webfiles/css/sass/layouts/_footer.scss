@@ -1,0 +1,226 @@
+@use '../utils/_variables' as *;
+@use '../components/form';
+
+footer {
+    width: 100%;
+    margin-top: 8rem;
+
+    h2,
+    h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    svg {
+        width: 100%;
+        height: 250px;
+        transition: 0.15s;
+    }
+
+    .underwave-container {
+        background: radial-gradient(circle at bottom left, #ED4621 0%, #A11368 100%);
+        margin-top: -1rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            left: -3%;
+            width: 103%;
+            height: 80%;
+            background: radial-gradient(circle at bottom left, #ED4621 0%, #A11368 100%);
+            z-index: 1;
+            filter: blur(5px);
+        }
+
+    }
+
+    .mxwdth {
+        display: flex;
+        flex-direction: row;
+        gap: 6rem;
+        max-width: $mxw;
+        margin: auto;
+        padding: 0 1.25rem;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+
+        section {
+            width: 50%;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-top: 2.5rem;
+
+        fieldset {
+            display: flex;
+            flex-direction: row;
+            gap: 1.25rem;
+        }
+
+        input,
+        textarea,
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.625rem 1rem;
+            box-sizing: border-box;
+            border-radius: 0.625rem;
+            border: none;
+            background-color: $primary;
+        }
+
+        textarea {
+            resize: none;
+            max-height: 250px;
+            min-height: 250px;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        input[type="checkbox"] {
+            padding: 0;
+            width: 30px;
+        }
+
+        button {
+            margin-top: 1.25rem;
+            cursor: pointer;
+            padding: 0.35rem 1rem !important;
+
+            span.content {
+                max-width: 250px;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    #location {
+
+        #map-container {
+            box-sizing: border-box;
+            overflow: hidden;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 800px;
+            margin-top: -200px;
+            margin-bottom: -200px;
+        }
+
+        ul li {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding: 0 1.25rem;
+
+            &:first-of-type {
+                align-items: start;
+            }
+
+            &:last-of-type {
+                margin-bottom: 2.5rem;
+            }
+
+            p {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .icon {
+            display: block;
+            width: 30px;
+            margin-right: 1rem;
+
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+
+    .socials-links {
+
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+        padding: 0 1.25rem;
+
+        a {
+            display: block;
+            width: 40px;
+            text-decoration: none;
+
+            img {
+                width: 100%;
+                transition: filter 0.3s;
+
+                &:hover {
+                    filter: invert(60%);
+                }
+            }
+        }
+    }
+
+    #copyrights {
+        margin-top: 4rem;
+        margin-bottom: 0;
+        padding: 1.25rem;
+        text-align: center;
+        border-top: 2px solid $primary;
+    }
+
+
+    @media screen and (max-width: 1920px) {
+        svg {
+            height: 185px;
+        }
+
+        .underwave-container {
+            margin-top: -0.5rem;
+        }
+    }
+
+    @media screen and (max-width: 1299px) {
+
+        margin-top: 1rem;
+        overflow: hidden;
+
+        svg {
+            height: 200px;
+            width: 200%;
+        }
+
+        .underwave-container {
+            background: radial-gradient(circle at bottom left, #ED4621 0%, #A11368 200%);
+
+            &::before {
+                background: radial-gradient(circle at bottom left, #ED4621 0%, #A11368 200%)
+            }
+        }
+    }
+}

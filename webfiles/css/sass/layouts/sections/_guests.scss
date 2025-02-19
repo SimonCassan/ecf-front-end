@@ -1,0 +1,50 @@
+.guests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 3rem;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.15);
+        text-align: center;
+        padding: 2.5rem 1.25rem;
+        box-sizing: border-box;
+
+        h3 {
+            order: 2;
+            margin: 1.25rem 0;
+        }
+
+        img {
+            order: 1;
+            width: 100%;
+            width: 200px;
+            height: 195px;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+                filter: brightness(110%);
+            }
+        }
+
+        p {
+            order: 3;
+            max-width: 400px;
+            margin: auto;
+        }
+    }
+
+    article:nth-child(-n+2) {
+        flex: 1 1 calc(50% - 1.25rem);
+    }
+
+    article:nth-child(n+3) {
+        flex: 1 1 calc(25% - 1.25rem);
+    }
+
+}

@@ -1,0 +1,27 @@
+#burger-icon {
+    display: none;
+}
+
+.burger-list {
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+    position: relative;
+    transform: none;
+    top: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #location #map-container {
+    border-radius: none;
+}
+
+#map-container img {
+    border-radius: 1rem;
+}
+
+iframe {
+    display: none;
+}
