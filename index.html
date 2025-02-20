@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="La convention du jeu vidéo la plus célèbre des Hauts-de-France sera de retour les 24, 25, 26, 27 et 28 février prochains ! Êtes vous prêt.e.s ?">
-    <link rel="icon" type="image/x-icon" href="./src/icons/favicon.ico">
+        content="La convention du jeu vidéo la plus célèbre des Hauts-de-France sera de retour les 24, 25, 26, 27 et 28 février prochains ! Êtes-vous prêt.e.s ?">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="./src/icons/apple-touch-icon.png">
+    <link rel="manifest" href="./src/icons/site.webmanifest">
     <link rel="stylesheet" href="./webfiles/css/build/pages/home.css">
     <script src="./webfiles/js/script-mini.js" defer></script>
     <noscript>
@@ -198,11 +201,13 @@
                     <form action="#" method="POST" novalidate>
                         <fieldset class="name">
                             <div>
-                                <input type="text" name="lastname" id="lastname" placeholder="Votre nom*">
+                                <input type="text" name="lastname" id="lastname" placeholder="Votre nom*"
+                                    title="Caractères uniquement alphabétiques, accents français autorisés.">
                                 <p class="error-text">Champ obligatoire, entre 2 et 50 caractères.</p>
                             </div>
                             <div>
-                                <input type="text" name="firstname" id="firstname" placeholder="Votre prenom*">
+                                <input type="text" name="firstname" id="firstname" placeholder="Votre prenom*"
+                                    title="Caractères uniquement alphabétiques, accents français autorisés.">
                                 <p class="error-text">Champ obligatoire, entre 2 et 50 caractères.</p>
                             </div>
                         </fieldset>
