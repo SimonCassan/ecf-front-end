@@ -12,6 +12,7 @@ function closeMenu() {
     lineMiddle.classList.toggle('opacity0', false);
     lineBot.classList.toggle('-rotate45', false);
     burgerMenu.classList.toggle('burger-active', false);
+    btnBurger.setAttribute('aria-label', 'Bouton pour ouvrir le menu de navigation');
 }
 
 // quand on clique sur le menu, on active/enlève les classes nécessaires
@@ -22,6 +23,10 @@ btnBurger.addEventListener('click', (event) => {
     lineMiddle.classList.toggle('opacity0');
     lineBot.classList.toggle('-rotate45');
     burgerMenu.classList.toggle('burger-active');
+    if (burgerMenu.classList.contains('burger-active'))
+        btnBurger.setAttribute('aria-label', 'Bouton pour fermer le menu de navigation');
+    else
+        btnBurger.setAttribute('aria-label', 'Bouton pour ouvrir le menu de navigation');
 })
 
 window.addEventListener('click', (event) => {
