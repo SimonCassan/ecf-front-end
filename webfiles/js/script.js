@@ -161,3 +161,12 @@ window.addEventListener('scroll', () => {
         document.documentElement.style.setProperty('--underline-color', '#202e5a');
     }
 });
+
+// masque le laader quand l'iframe est chargé.
+const iframe = document.querySelector("iframe");
+iframe.addEventListener("load", function () {
+    const loader = this.previousElementSibling;
+    if (loader) {
+        loader.style.display = "none";
+    }
+});

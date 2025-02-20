@@ -1,5 +1,6 @@
 @use '../utils/_variables' as *;
 @use '../components/form';
+@use '../components/loader';
 
 footer {
     width: 100%;
@@ -52,6 +53,13 @@ footer {
     }
 
     #location {
+
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
 
         #map-container {
             box-sizing: border-box;
@@ -124,6 +132,7 @@ footer {
 
                 &:hover {
                     filter: invert(60%);
+                    animation: wobble 0.5s;
                 }
             }
         }
