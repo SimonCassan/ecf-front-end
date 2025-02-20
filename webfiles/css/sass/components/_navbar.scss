@@ -9,7 +9,7 @@ nav {
     margin-bottom: 8rem;
     position: relative;
 
-    a {
+    a:not(.burger-list a) {
         font-family: $titleFont;
         font-size: 1.5rem;
         text-decoration: none;
