@@ -105,6 +105,17 @@ form p {
     box-shadow: 0 0 1rem #333;
 }
 
+.error-active input[type="checkbox"] {
+    outline: 2px solid red;
+    outline-offset: 2px;
+    box-shadow: 0 0 1rem #333;
+}
+
+.error-active.flex-line label {
+    text-decoration: underline 2px solid #000;
+    text-underline-offset: 2px;
+}
+
 .card {
     position: fixed;
     top: 25%;
